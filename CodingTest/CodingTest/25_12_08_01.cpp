@@ -4,7 +4,6 @@
 #include <iostream>
 #include <map>
 using namespace std;
-
 map<int, bool>MAP;
 
 int main()
@@ -37,9 +36,6 @@ int main()
 			cout << 0 << " ";
 		}
 	}
-
-
-
 
 	return 0;
 }
