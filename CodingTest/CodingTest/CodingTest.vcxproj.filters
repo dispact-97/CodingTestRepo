@@ -21,5 +21,11 @@
     <ClCompile Include="25_12_08_02.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="25_12_09_01.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="25_12_09_02.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
