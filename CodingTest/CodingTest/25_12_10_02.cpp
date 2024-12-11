@@ -36,10 +36,6 @@ int main()
 			dMap[name] = true;
 			count++;
 		}
-		else
-		{
-
-		}
 	}
 
 	cout << count<<"\n";
