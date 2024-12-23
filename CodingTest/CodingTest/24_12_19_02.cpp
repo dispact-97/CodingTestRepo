@@ -74,11 +74,10 @@ int main()
 			}
 			else
 			{
-				cout << q.front() << '\n';
+				cout << q.back() << '\n';
 			}
 		}
 	}
-
 
 	return 0;
 }
