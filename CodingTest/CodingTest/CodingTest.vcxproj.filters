@@ -84,5 +84,11 @@
     <ClCompile Include="24_12_26_02.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="24_12_27_01.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="24_12_27_02.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
