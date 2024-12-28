@@ -25,10 +25,6 @@ int main()
 	{
 		cout << 1;
 	}
-	else if (K>N)
-	{
-		cout << 0;
-	}
 	else
 	{
 		int res = facto(N) / (facto(K) * facto(N - K));
