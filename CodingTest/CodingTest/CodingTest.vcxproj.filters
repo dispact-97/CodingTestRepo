@@ -114,5 +114,11 @@
     <ClCompile Include="24_12_30_02.cpp">
       <Filter>24_12</Filter>
     </ClCompile>
+    <ClCompile Include="24_12_31_01.cpp">
+      <Filter>24_12</Filter>
+    </ClCompile>
+    <ClCompile Include="24_12_31_02.cpp">
+      <Filter>24_12</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -39,7 +39,8 @@ int main()
 
 	vector<pair<string, int>> vec(m.begin(), m.end());
 
-	sort(vec.begin(), vec.end(), [](const pair<string, int>& a, const pair<string, int>& b) {
+	sort(vec.begin(), vec.end(), [](const pair<string, int>& a, const pair<string, int>& b) 
+		{
 		if (a.second != b.second)
 		{
 			return a.second > b.second; // 1. 자주 나오는 단어가 앞
