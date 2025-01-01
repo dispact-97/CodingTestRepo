@@ -28,7 +28,6 @@ int main()
 	ios::sync_with_stdio(false); // C와 C++의 입출력을 동기화하지 않음 (입출력 속도 향상)
 	cin.tie(NULL);               // cin과 cout의 묶음을 해제하여 입출력 성능 최적화
 
-
 	int N = 0, res = 0;
 	cin >> N;
 

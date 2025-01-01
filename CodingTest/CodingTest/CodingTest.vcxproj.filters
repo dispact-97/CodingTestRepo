@@ -13,6 +13,9 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+    <Filter Include="25_01">
+      <UniqueIdentifier>{f750a634-4e02-47cf-b58d-c32a1f2640fb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="24_12_08_01.cpp">
@@ -119,6 +122,12 @@
     </ClCompile>
     <ClCompile Include="24_12_31_02.cpp">
       <Filter>24_12</Filter>
+    </ClCompile>
+    <ClCompile Include="25_01_01_01.cpp">
+      <Filter>25_01</Filter>
+    </ClCompile>
+    <ClCompile Include="25_01_01_02.cpp">
+      <Filter>25_01</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
