@@ -129,5 +129,11 @@
     <ClCompile Include="25_01_01_02.cpp">
       <Filter>25_01</Filter>
     </ClCompile>
+    <ClCompile Include="25_01_02_01.cpp">
+      <Filter>25_01</Filter>
+    </ClCompile>
+    <ClCompile Include="25_01_02_02.cpp">
+      <Filter>25_01</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
