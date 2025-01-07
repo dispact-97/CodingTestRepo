@@ -4,8 +4,11 @@ using namespace std;
 
 int main()
 {
-	cout << -3 * -3;
+	int v3 = 29;
 
+	v3 = v3 << 2;
+
+	cout << v3;
 
 	return 0;
 }
