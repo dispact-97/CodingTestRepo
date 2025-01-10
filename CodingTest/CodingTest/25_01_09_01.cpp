@@ -30,13 +30,3 @@ int solution(int diffs[], size_t diffs_len, int times[], size_t times_len, long 
 
     return answer;
 }
-
-int main()
-{
-    int diffs[3];
-    int times[3];
-    int limit;
-
-
-    return 0;
-}
