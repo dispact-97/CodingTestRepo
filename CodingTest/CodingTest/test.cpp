@@ -1,39 +1,30 @@
 #include <iostream>
 #include <string>
-#include <stack>
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
-char dan[100000];
+int solution(int k, int m, vector<int> score) {
+    int answer = 0;
+    int box = 0;
+    int count = 0;
 
-bool solution(string s)
-{
-    bool answer = true;
-    int lcount = 0;
-    stack<string> stc;
+    vector<int> tempVec;
+    box = score.size() / m;
 
-    for (int i = 0; i < s.size(); i++)
+    sort(score.begin(), score.end(),greater<int>());
+    //reverse(score.begin(), score.end());
+
+    for (int i = 0; i < box; i++)
     {
-        if (s[i] == '(')
+        tempVec.clear();
+        for (int j = 0; j < m; j++)
         {
-            stc.push("(");
+            tempVec.push_back(score[count]);
+            count++;
         }
-        else
-        {
-            if (stc.empty())
-            {
-                continue;
-            }
-            else
-            {
-                stc.pop();
-            }
-        }
-    }
-
-    if (!stc.empty())
-    {
-        answer = false;
+        answer += tempVec.back() * k;
     }
 
     return answer;
@@ -44,9 +35,17 @@ int main()
 	ios::sync_with_stdio(false); // C와 C++의 입출력을 동기화하지 않음 (입출력 속도 향상)
 	cin.tie(NULL);               // cin과 cout의 묶음을 해제하여 입출력 성능 최적화
 
-    cin >> dan;
+	vector<int> vec;
 
-    cout << solution(dan);
+	vec.push_back(1);
+	vec.push_back(2);
+	vec.push_back(3);
+	vec.push_back(1);
+	vec.push_back(2);
+	vec.push_back(3);
+	vec.push_back(1);
+
+	cout << solution(3, 4, vec);
 
 	return 0;
 }
