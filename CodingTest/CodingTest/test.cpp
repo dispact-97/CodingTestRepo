@@ -4,45 +4,44 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <algorithm>
 
 using namespace std;
 
+int* countNum(int arr[], string s)
+{
+	for (int i = 0; i < s.size(); i++)
+	{
+		arr[s[i] - '0']++;
+	}
+	return arr;
+}
+
 string solution(string X, string Y) {
 	string answer = "";
-	int arr1[10];
-	fill(arr1, arr1 + 10, -1);
-	int arr2[10] = {};
-	vector<int> vec;
+	int x[10] = {};
+	int y[10] = {};
 
-	for (int i = 0; i < X.size(); i++)
+	countNum(x, X);
+	countNum(y, Y);
+
+	for (int i = 9; i >= 0; i--)
 	{
-		int temp = X[i] - '0';
-		if (arr1[temp] == -1)
+		int num = min(x[i], y[i]);
+		for (int j = 0;j<num;j++)
 		{
-			arr1[temp] = 1;
-		}
-		else
-		{
-			arr1[temp]++;
+			answer += to_string(i);
 		}
 	}
 
-	for (int i = 0; i < Y.size(); i++)
+	if (answer == "")
 	{
-		int temp = Y[i] - '0';
-		if (arr1[temp] != -1)
-		{
-			arr2[temp]++;
-		}
+		return "-1";
 	}
-
-	for (int i = 0; i < 10; i++)
+	else if (answer[0] == '0')
 	{
-
+		return "0";
 	}
-
-	return answer;
+	else return answer;
 }
 
 int main()

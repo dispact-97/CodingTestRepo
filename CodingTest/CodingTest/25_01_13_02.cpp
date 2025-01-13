@@ -7,39 +7,53 @@
 
 using namespace std;
 
+int* countNum(int arr[], string s)
+{
+	for (int i = 0; i < s.size(); i++)
+	{
+		arr[s[i] - '0']++;
+	}
+	return arr;
+}
+
 string solution(string X, string Y) {
-    string answer = "";
-    int arr1[10] = { 0, };
-    int arr2[10] = { 0, };
+	string answer = "";
+	int x[10] = {};
+	int y[10] = {};
 
-    for (auto iter : X)
-    {
-        arr1[iter]++;
-    }
+	countNum(x, X);
+	countNum(y, Y);
 
-    for (auto iter : Y)
-    {
+	for (int i = 9; i >= 0; i--)
+	{
+		int num = min(x[i], y[i]);
+		for (int j = 0; j < num; j++)
+		{
+			answer += to_string(i);
+		}
+	}
 
-    }
-
-    for (int i = 0; i < 10; i++)
-    {
-        cout << arr1[i] << '\n';
-    }
-
-    return answer;
+	if (answer == "")
+	{
+		return "-1";
+	}
+	else if (answer[0] == '0')
+	{
+		return "0";
+	}
+	else return answer;
 }
 
 int main()
 {
-    ios::sync_with_stdio(false); // C와 C++의 입출력을 동기화하지 않음 (입출력 속도 향상)
-    cin.tie(NULL);               // cin과 cout의 묶음을 해제하여 입출력 성능 최적화
+	ios::sync_with_stdio(false); // C와 C++의 입출력을 동기화하지 않음 (입출력 속도 향상)
+	cin.tie(NULL);               // cin과 cout의 묶음을 해제하여 입출력 성능 최적화
 
-    string X, Y;
+	string X, Y;
 
-    cin >> X >> Y;
+	cin >> X >> Y;
 
-    cout << solution(X, Y);
+	cout << solution(X, Y);
 
-    return 0;
+	return 0;
 }
