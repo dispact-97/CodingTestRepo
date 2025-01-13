@@ -1,3 +1,6 @@
+// 프로그래머스 숫자 짝꿍
+// https://school.programmers.co.kr/learn/courses/30/lessons/131128
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -5,29 +8,41 @@
 
 using namespace std;
 
-int solution(int k, int m, vector<int> score) {
-    int answer = 0;
-    int box = 0;
-    int count = 0;
+string solution(string X, string Y) {
+	string answer = "";
+	int arr1[10];
+	fill(arr1, arr1 + 10, -1);
+	int arr2[10] = {};
+	vector<int> vec;
 
-    vector<int> tempVec;
-    box = score.size() / m;
+	for (int i = 0; i < X.size(); i++)
+	{
+		int temp = X[i] - '0';
+		if (arr1[temp] == -1)
+		{
+			arr1[temp] = 1;
+		}
+		else
+		{
+			arr1[temp]++;
+		}
+	}
 
-    sort(score.begin(), score.end(),greater<int>());
-    //reverse(score.begin(), score.end());
+	for (int i = 0; i < Y.size(); i++)
+	{
+		int temp = Y[i] - '0';
+		if (arr1[temp] != -1)
+		{
+			arr2[temp]++;
+		}
+	}
 
-    for (int i = 0; i < box; i++)
-    {
-        tempVec.clear();
-        for (int j = 0; j < m; j++)
-        {
-            tempVec.push_back(score[count]);
-            count++;
-        }
-        answer += tempVec.back() * k;
-    }
+	for (int i = 0; i < 10; i++)
+	{
 
-    return answer;
+	}
+
+	return answer;
 }
 
 int main()
@@ -35,17 +50,11 @@ int main()
 	ios::sync_with_stdio(false); // C와 C++의 입출력을 동기화하지 않음 (입출력 속도 향상)
 	cin.tie(NULL);               // cin과 cout의 묶음을 해제하여 입출력 성능 최적화
 
-	vector<int> vec;
+	string X, Y;
 
-	vec.push_back(1);
-	vec.push_back(2);
-	vec.push_back(3);
-	vec.push_back(1);
-	vec.push_back(2);
-	vec.push_back(3);
-	vec.push_back(1);
+	cin >> X >> Y;
 
-	cout << solution(3, 4, vec);
+	cout << solution(X, Y);
 
 	return 0;
 }
