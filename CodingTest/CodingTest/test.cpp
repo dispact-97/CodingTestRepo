@@ -1,31 +1,35 @@
-// 프로그래머스 숫자 짝꿍
-// https://school.programmers.co.kr/learn/courses/30/lessons/131128
-
 #include <iostream>
-#include <string>
-#include <vector>
-
 using namespace std;
+class A
+{
+public:
+	A() { cout << "1"; }
+	A(const A& obj) { cout << "2"; }
+};
 
-int solution(vector<int> cards) {
-	int answer = 0;
+class B : virtual A
+{
+public:
+	B() { cout << "3"; }
+	B(const B & obj) { cout << "4"; }
+};
 
+class C : virtual A
+{
+public:
+	C() { cout << "5"; }
+	C(const C& obj) { cout << "6"; }
+};
 
-
-	return answer;
-}
+class D :B, C
+{
+public:
+	D() { cout << "7"; }
+	D(const D& obj) { cout << "8"; }
+};
 
 int main()
 {
-	ios::sync_with_stdio(false); // C와 C++의 입출력을 동기화하지 않음 (입출력 속도 향상)
-	cin.tie(NULL);               // cin과 cout의 묶음을 해제하여 입출력 성능 최적화
-
-	vector<int> vec;
-
-	vec = { 8,6,3,7,2,5,1,4 };
-
-	cout << solution(vec);
-
-
-	return 0;
+	D d1;
+	D d(d1);
 }
