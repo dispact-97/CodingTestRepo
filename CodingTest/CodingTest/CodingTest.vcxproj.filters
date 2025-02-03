@@ -16,6 +16,9 @@
     <Filter Include="25_01">
       <UniqueIdentifier>{f750a634-4e02-47cf-b58d-c32a1f2640fb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="25_02">
+      <UniqueIdentifier>{42f92aa7-2c75-40eb-b965-de2d498dfcb0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="24_12_08_01.cpp">
@@ -153,8 +156,11 @@
     <ClCompile Include="25_01_13_02.cpp">
       <Filter>25_01</Filter>
     </ClCompile>
-    <ClCompile Include="25_01_14_01.cpp">
+    <ClCompile Include="25_01_26_01%28Re%29.cpp">
       <Filter>25_01</Filter>
+    </ClCompile>
+    <ClCompile Include="25_02_01_01.cpp">
+      <Filter>25_02</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
