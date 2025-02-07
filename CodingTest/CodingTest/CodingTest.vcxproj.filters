@@ -171,5 +171,8 @@
     <ClCompile Include="25_02_06_01.cpp">
       <Filter>25_02</Filter>
     </ClCompile>
+    <ClCompile Include="25_02_07_01.cpp">
+      <Filter>25_02</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
